@@ -2,4 +2,4 @@
 A collection of notes covering the foundational concepts of databases from the LinkedIn Learning Course - Programming Foundations: Databases
 
 ### Table of Contents
-- [Introduction] {./intronotes.md}
+- [Introduction] {./introduction.md}

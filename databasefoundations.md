@@ -30,12 +30,12 @@ A **foreign key** is where one table's primary key is referenced in another tabl
 Example:
 | OrderID | CustomerID | Order |
 | --- | --- | --- |
-| 7 | *19* | Classic Burger |
+| 7 | **19** | Classic Burger |
 | 16 | 4 | Apple Pie |
 | 24 | 19 | Cheesecake |
 
 | CustomerID | First Name | Last Name | Phone No. | Birthday |
 | --- | --- | --- | --- | --- |
-| *19* | Abby | Smith | (987) 654 - 3210 | 1989-01-30 |
+| **19** | Abby | Smith | (987) 654 - 3210 | 1989-01-30 |
 | 4 | Betty | Thomas | (012) 345 - 6789 | 1985-12-14 |
 | 29 | Caroline | George | (019) 284 - 3576 | 2000-05-21 |

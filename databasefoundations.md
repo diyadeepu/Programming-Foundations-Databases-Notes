@@ -19,13 +19,18 @@ Each column will require a certain type of information about each instance that 
 - Date
 - True/false value
 - Binary data
+
 All values within a column will contain same format of information, yet the values will differ for each entity.
 
 ### Keys and Unique Values
 A **key** is a unique value to access one specific row. For example, with the customer table, it's entirely possible to have multiple customers with the same name. Thus, using a key can ensure the right customer is identified.
+
 The most important key in a table is the **primary key**. While it's not necessarily required, it can help grab specific rows with more ease.
+
 Many DBMS tools create a column with a number that's constantly incremented as each entity is added, and this is known as a **synthetic key**, or a **surrogate key**.
+
 In situations where the schema can't be edited, two or more data values will need to act as the unique identifier key, aka the **composite key**.
+
 A **foreign key** is where one table's primary key is referenced in another table. This is crucial when relationships between different tables are formed.
 Example:
 | OrderID | CustomerID | Order |
@@ -42,6 +47,7 @@ Example:
 
 ### Relationships
 Building relationships with different tables allows us to utilize data in more sophisticated implementations.
+
 The three types of database relationships include:
 - One-to-many
   - The most common relationship where a record from one table is associated with multiple records in another table.
@@ -54,4 +60,5 @@ The three types of database relationships include:
  
 ### ACID and transactions
 Adding or removing records are easy modifications that can be made to a table. Yet, in complex interaction like bank transactions, where multiple operations are done, changes made to data need to be done strictly and accurately.
+
 Current systems can process information quickly, but not instantaneously, thus if an error is present, the whole process can be broken. 

@@ -4,3 +4,4 @@ A collection of notes covering the foundational concepts of databases from the L
 ### Table of Contents
 - [Introduction Notes](./introduction.md)
 - [Database Foundations](./databasefoundations.md)
+- [Tables](./tables.md)

@@ -39,3 +39,19 @@ Example:
 | **19** | Abby | Smith | (987) 654 - 3210 | 1989-01-30 |
 | 4 | Betty | Thomas | (012) 345 - 6789 | 1985-12-14 |
 | 29 | Caroline | George | (019) 284 - 3576 | 2000-05-21 |
+
+### Relationships
+Building relationships with different tables allows us to utilize data in more sophisticated implementations.
+The three types of database relationships include:
+- One-to-many
+  - The most common relationship where a record from one table is associated with multiple records in another table.
+  - For example, if we take a dish from the dishes table and look through our customers table, we can identify which customers found that particular dish to be their favorite. The key from the dishes table would be a primary key, while the key in the customers table would be a foreign key.
+- Many-to-many
+  - This relationship occurs when multiple records from one table are associated with multiple records in another table. We use a linking table here that has columns with foreign keys from each table.
+- One-to-one
+  - This relationship occurs when one record from a table is associated with a single record in another table and vice versa.
+  - This isn't as commonly used, but it can be useful.
+ 
+### ACID and transactions
+Adding or removing records are easy modifications that can be made to a table. Yet, in complex interaction like bank transactions, where multiple operations are done, changes made to data need to be done strictly and accurately.
+Current systems can process information quickly, but not instantaneously, thus if an error is present, the whole process can be broken. 

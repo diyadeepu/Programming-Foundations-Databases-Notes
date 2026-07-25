@@ -52,8 +52,10 @@ The three types of database relationships include:
 - One-to-many
   - The most common relationship where a record from one table is associated with multiple records in another table.
   - For example, if we take a dish from the dishes table and look through our customers table, we can identify which customers found that particular dish to be their favorite. The key from the dishes table would be a primary key, while the key in the customers table would be a foreign key.
+
 - Many-to-many
   - This relationship occurs when multiple records from one table are associated with multiple records in another table. We use a linking table here that has columns with foreign keys from each table.
+
 - One-to-one
   - This relationship occurs when one record from a table is associated with a single record in another table and vice versa.
   - This isn't as commonly used, but it can be useful.
@@ -92,7 +94,8 @@ In this example, **SELECT**, **FROM**, and **WHERE** would be the clauses. The e
 
 These statements can either be written in database software (e.g. SQL Server Management Studio) or added in program code so that an app can access data. 
 
-For example, this statement ('SELECT FirstName, LastName FROM Customers WHERE Birthday = '1991-02-09';) would show the user the first name and last name for every record within the customers table with that specific birthday. Three clauses are used here: the first asks for FirstName, LastName, and Birthday fields; the second specifies using records from the customer table; the third specifies how to sort the returned records.
+For example, this statement ('SELECT FirstName, LastName FROM Customers WHERE Birthday = '1991-02-09';) would show the user the first name and last name for every record within the customers table with that specific birthday. 
+- Three clauses are used here: the first asks for FirstName, LastName, and Birthday fields; the second specifies using records from the customer table; the third specifies how to sort the returned records.
 
 A **query** asks the database for information or to do something. 
 
@@ -100,24 +103,14 @@ A **query** asks the database for information or to do something.
 CRUD (Create, Read, Update, Delete) operations are basic operations that interact with data. 
 
 ### Summary
-A unique value occurs only once in a given column.
-
-A relationship connects two pieces of data in different tables within the same database.
-
-A good example of a candidate key would be an employee ID number as it would be a unique value.
-
-SELECT Width,Height FROM Shapes; contains 2 SQL clauses, SELECT and FROM.
-
-In a database, a relation is a set of attributes (columns) describing information about specific instances (rows) of an entity.
-
-A composite key is a key that consists of different fields taken together to act as a unique identifier.
-
-Durability is the ACID step that requires the database to be updated when the transaction completes successfully.
-
-An associate table is useful when records need to be related in a many-to-many relationship.
-
-Atomic is the ACID step stating that a transaction can't be divided into smaller parts.
-
-SQL is the language used to communicate with a database.
-
-A transaction is all of the steps for an action that must be completed.
+- A unique value occurs only once in a given column.
+- A relationship connects two pieces of data in different tables within the same database.
+- A good example of a candidate key would be an employee ID number as it would be a unique value.
+- SELECT Width,Height FROM Shapes; contains 2 SQL clauses, SELECT and FROM.
+- In a database, a relation is a set of attributes (columns) describing information about specific instances (rows) of an entity.
+- A composite key is a key that consists of different fields taken together to act as a unique identifier.
+- Durability is the ACID step that requires the database to be updated when the transaction completes successfully.
+- An associate table is useful when records need to be related in a many-to-many relationship.
+- Atomic is the ACID step stating that a transaction can't be divided into smaller parts.
+- SQL is the language used to communicate with a database.
+- A transaction is all of the steps for an action that must be completed.

@@ -18,7 +18,7 @@ Linking tables are usually named by joining the name of both tables (the table o
 
 Example:
 
-######Orders
+###### Orders
 | OrderID | CustomerID | OrderDate |
 | --- | --- | --- |
 | 17 | 1 | 2019-02-08 13:45:21 |
@@ -27,16 +27,16 @@ Example:
 | 6 | 1 | 2018-12-14 12:45:16 |
 | 3 | 16 | 2018-12-04 18:12:34 |
 
-######Dishes
+###### Dishes
 | DishID | Name | Description |
 | --- | --- | --- |
 | 8 | Chef's Salad | The Chef's Salad has ... |
 | 10 | Classic Burger | Our Classic Burger ... |
 | 14 | Family Fiesta Platter | This platter is ... |
 | 15 | Créme Brûlée | Elegantly crafted ... |
-| 16 | Cheesecake | Our New York style |
+| 16 | Cheesecake | Our New York style ... |
 
-######OrdersDishes
+###### OrdersDishes
 | OrderID | DishID |
 | --- | --- |
 | 17 | 8 |

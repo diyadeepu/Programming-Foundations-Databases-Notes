@@ -21,7 +21,7 @@ Additionally, avoid special characters and spaces for both table and field names
 ### Columns and data types
 **Null** is a value representing the absence of the value in a database. It's not a data type, but rather a condition. If a cell has a value, it is _NOT NULL_. 
 
-##### Data Types for Dates
+#### Data Types for Dates
 A **data type** is the type of information stored in each column.
 - Date: used to store dates
   - e.g. Birthday (2019-03-09)
@@ -29,7 +29,7 @@ A **data type** is the type of information stored in each column.
   - TIMESTAMP: automatically captures the date and time when a row is updated or added
     - Great for recording when an order was placed
 
-##### Data Types for Strings
+#### Data Types for Strings
 - Strings: a collection of characters and text
   - CHAR: a fixed number of characters
     - Often reserved for fields where we know the exact number of characters within the field in each row
@@ -41,7 +41,7 @@ _A database needs to know the length of the string to efficiently store informat
 
 Different databases might have more specialized types. MySQL, for example, has a text type for longer text.
 
-##### Data Types for Numbers
+#### Data Types for Numbers
 - Integers
 - Double precision
 - Floating point

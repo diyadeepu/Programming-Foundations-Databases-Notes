@@ -8,7 +8,7 @@
 
 ### What is a Relational Database?
 A database organizing data into relations (tables of related data).
-- Rows in a table are instances of an item / object.
+- Rows in a table are instances of an item / object. A set of rows is referred to as "tuples"
 - Columns in a table are attributes of that item / object. A set of columns is referred to as a relation.
 - Example: Let's say a restaurant stores information about its customers in a table within a database. Each customer would be an entity, and the attributes collected would be name, phone no., email, etc. Another table stored in the database could be dishes. Each dish would be an entity, and the attributes collected here would differ from the customers: name, price, description, etc.
 
@@ -62,3 +62,62 @@ The three types of database relationships include:
 Adding or removing records are easy modifications that can be made to a table. Yet, in complex interaction like bank transactions, where multiple operations are done, changes made to data need to be done strictly and accurately.
 
 Current systems can process information quickly, but not instantaneously, thus if an error is present, the whole process can be broken. 
+
+Transactions in databases are used to prevent these types of errors. A **transaction** is a set of operations that require them all to be completed. In the case that an operation isn't completed, the database remains completely unchanged.
+
+ACID is a principle that transactions follow, where A stands for atomic, C stands for consistent, I stands for isolated, and D stands for durable.
+- Atomic: parts of the transaction can't be separated
+- Consistency: transactions need to leave the database in a consistent condition.
+- Isolated: while transaction operations are executing, no other changes can be made to the database
+- Durability: altered information is actually stored into the database
+
+DBMS software has the ability to follow the ACID principle and applies it when the user indicates that a transaction is being made.
+
+### Basic SQL
+**SQL (Structured Query Language)**, or **Sequel** is the language users use to communicate with databases.
+
+Most **relational database management system tools (RDBMS)** support **ANSI SQL**, a version defined by the American National Standards Institute that has the standard, wide set of SQL commands. Many tools have their own version to incorporate features that are specific to the DBMS software they use (e.g. T-SQL / Transact-SQL, MySQL).
+
+### What is the purpose of SQL?
+SQL lets you write statements for the DBMS to understand how to interact with data given. SQL, in this case, is a **data manipulation language (DML)**. SQL additionally has features for managing databases, like adding or editing tables and controlling access to tables. Here, SQL acts as a **data definition language (DDL)** and a **data control language**.
+
+### Foundational SQL Statements
+A **SQL statement** is made up of clauses with expressions and predicates. Clauses are keywords specifying action, while expressions and predicates set parameters to operate on. To ensure readability, keywords are often in uppercase.
+
+Example:
+SELECT FirstName, LastName FROM Customers
+WHERE LastName = 'Jenkins';
+
+In this example, **SELECT**, **FROM**, and **WHERE** would be the clauses. The expression would be **LastName = 'Jenkins'**, while the predicate is **'Jenkins'**.
+
+These statements can either be written in database software (e.g. SQL Server Management Studio) or added in program code so that an app can access data. 
+
+For example, this statement ('SELECT FirstName, LastName FROM Customers WHERE Birthday = '1991-02-09';) would show the user the first name and last name for every record within the customers table with that specific birthday. Three clauses are used here: the first asks for FirstName, LastName, and Birthday fields; the second specifies using records from the customer table; the third specifies how to sort the returned records.
+
+A **query** asks the database for information or to do something. 
+
+### What are CRUD operations?
+CRUD (Create, Read, Update, Delete) operations are basic operations that interact with data. 
+
+### Summary
+A unique value occurs only once in a given column.
+
+A relationship connects two pieces of data in different tables within the same database.
+
+A good example of a candidate key would be an employee ID number as it would be a unique value.
+
+SELECT Width,Height FROM Shapes; contains 2 SQL clauses, SELECT and FROM.
+
+In a database, a relation is a set of attributes (columns) describing information about specific instances (rows) of an entity.
+
+A composite key is a key that consists of different fields taken together to act as a unique identifier.
+
+Durability is the ACID step that requires the database to be updated when the transaction completes successfully.
+
+An associate table is useful when records need to be related in a many-to-many relationship.
+
+Atomic is the ACID step stating that a transaction can't be divided into smaller parts.
+
+SQL is the language used to communicate with a database.
+
+A transaction is all of the steps for an action that must be completed.

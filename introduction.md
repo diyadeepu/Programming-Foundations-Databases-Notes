@@ -1,21 +1,21 @@
 # Introduction
 
 ### What is DBMS?
-A Database Management System (DBMS) is the software (e.g. SQL Server, MySQL or Access) that interacts with the database.
+A **Database Management System (DBMS)** is the software (e.g. SQL Server, MySQL or Access) that interacts with the database.
 
 ### Why do we use databases?
 Databases allow us to organize and set rules for data to comply with. They preserves data that can be utilized to answer questions, collect information, and more. Additionally, data can be protected from unauthorized access or changes.
 
 ### Benefits of Structured Data
 Unstructured data makes it harder to work with, so placing it into a spreadsheet, for example, allows for more structure and ease in finding information or gaps within the data.
-- Table: the basic building blocks of databases storing collections of rows and columns
+- **Table:** the basic building blocks of databases storing collections of rows and columns
 - Databases can contain multiple tables and build relationships between different tables based on the set guidelines defined.
 
 ### Parts of a Table
-- Rows (records): contains all information for a single entity
-- Columns (fields): contains the structure applicable to all entities
-  - Example: If we had a table storing all regular customers at a restaurant, each row would contain information about a customer and columns would provide the type of information stored (e.g. Name, Phone No., Email).
-- Schema: a table's structure within the database
+- **Rows (records):** contains all information for a single entity
+- **Columns (fields):** contains the structure applicable to all entities
+  - **Example:** If we had a table storing all regular customers at a restaurant, each row would contain information about a customer and columns would provide the type of information stored (e.g. Name, Phone No., Email).
+- **Schema:** a table's structure within the database
 
 ### Summary
 When you move data from an unstructured form to a structured form, what benefit do you gain?

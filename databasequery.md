@@ -100,3 +100,17 @@ The 5 Main Math Commands:
 All math commands can be combined into a single query to quickly generate reports or summaries without crashing your computer.
 
 ### Joining Tables
+Nomalization splits your data into separate tables, so you eventually nned a way to put it back together for it to make sense to a human reading it.
+
+Without connecting tables, if you ask the database for a list of customers and their favorite dishes, it will return raw IDs: _Taylor likes Dish #15_, making the data returned useless.
+
+You can use the command JOIN to connect two different tables. JOIN tells the database to look at 2 separate tables at once and match up their corresponding row.
+
+1. Pick your readable columns with SELECT. Ask you the actual words you want to see not the numbers.
+  - e.g. SELECT Customers.FirstName, Dishes.Name
+2. Declare your tables with JOIN. Tell the system which two tables are being combined.
+  - e.g. FROM Customers JOIN Dishes
+3. Provide the map with ON. You need to tell the database exactly which columns act as the matching link between the two tables.
+  - e.g. ON Customers.FavoriteDish = Dishes.DishID (_Whenever the 'Favorite Dish' number in the customer table matches the 'Dish ID' number in the menu table, stitch those 2 rows together._)
+
+Once you're able to do this, you can connect more tables at once, like pulling a customer's name, reservation time, and the price of their order into a single, easy to read report.

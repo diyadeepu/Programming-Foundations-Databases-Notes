@@ -176,8 +176,10 @@ Modifying data, however, can be extremely dangerous as there isn't any way to un
 - For a table that holds the purchase amounts in a grocery store over time, SELECT SUM(amount) FROM purchase; is the query that will likely return the highest value.
 - Without a WHERE condition, this query will update all records including possibly undesired ones.
 - The foreign key in the table below created after this command is Color.
+  ```sql
   CREATE TABLE Models (
   ModelID INT(6) NOT NULL AUTO_INCREMENT,
   Color INT(6) REFERENECES Colors(ColorID),
   PRIMARY KEY(ModelID)
   );
+  ```

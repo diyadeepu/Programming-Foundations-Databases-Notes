@@ -143,3 +143,39 @@ To modify actual information inside table (create, update, delete), three comman
 Modifying data, however, can be extremely dangerous as there isn't any way to undo changes. To avoid this, ensure the following:
 1. **Always use the primary key.** For example, if you wanted to delete a customer named "Anna", don't ever use WHERE FirstName="Anna" (_EVERY SINGLE CUSTOMER WITH THE NAME 'ANNA' WILL BE DELETED FROM THE SYSTEM_). Instead, use their exact, unique ID number (e.g. WHERE CustomerID=28)
 2. **Don't forget the WHERE clause.** If you typed UPDATE Customers SET Email="test@test.com" and forget to add the WHERE filter at the end, the database will instantly overwrite _every single customer's email_ in the entire table to that test email. Ensure to always run a SELECT search first so that you target the right row.
+
+### Summary
+- The "CREATE DATABASE" command is used to create a new database.
+  - e.g. CREATE DATABASE mydb;
+- Aggregate functions are used to tell you about certain characteristics of multiple records. Requesting a record by specific field values isn't an aggregate operation.
+- WHERE FirstName LIKE "A%"; is a WHERE condition that you can use to find all records containing a first name starting with the letter "A".
+  - The percent symbol is used as a wildcard for anything coming after the letter "A".
+- Aggregate functions return one result that describes a set of data.
+- The asterisk (*) is used as a placeholder to retrieve everything from a given table.
+- You can join as many tables together as long as you tell the database which pairs of values on the tables are intended to match.
+- In order to use records from more than one table in a query, you need to join the tables based on some matching criteria.
+  - This allows you to match rows from one table with rows on another table.
+- When the database automatically increments a key field, you don't have to worry about setting the value. The database will automatically provide the next value and set it manually when you enter a record.
+- When modifying a record, it's a good idea to specify the record as precisely as possible, ideally using the primary key.
+  - If you've designed your database correctly, each record should have a key that uniquely identifies it, making it safe to use that key to modify a record.
+- A field used for sorting doesn't need to appear in the 'SELECT' clause of query.
+- A SQL query is a SQL statement that returns requested records you asked for from the databases.
+- You can write SQL in an app's source code, in database management software, and at a command-line console.
+- You can narrow down the results that a query returns by only asking for results where a field matches a given value.
+  - e.g. You could ask the database to show you records for customers who have their 'State' field set to 'California'.
+- Inserting a record into a table is a data manipulation task you can accomplish using SQL as a DML.
+- When first defining a table, you should specify the table's name, the fields and type of data they contain, as well as the primary key and any referential constraints. Without this information, you can't fully define a table.
+- ORDER BY 'Date' DESC shows dates from latest to earliest.
+- When you use SQL statements to create or modify the structure of a database, SQL is being used as a Data Definition Language (DDL).
+- The following join statement specifies the field on which the two tables will be joined.
+  SELECT * FROM A
+  JOIN B ON A.ID=B.ID
+- When telling the database that a certain field must not contain an empty value, you say that it is not null.
+- For a table that holds the purchase amounts in a grocery store over time, SELECT SUM(amount) FROM purchase; is the query that will likely return the highest value.
+- Without a WHERE condition, this query will update all records including possibly undesired ones.
+- The foreign key in the table below created after this command is Color.
+  CREATE TABLE Models (
+  ModelID INT(6) NOT NULL AUTO_INCREMENT,
+  Color INT(6) REFERENECES Colors(ColorID),
+  PRIMARY KEY(ModelID)
+  );

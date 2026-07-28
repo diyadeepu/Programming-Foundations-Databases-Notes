@@ -24,19 +24,21 @@ SQL is the language used to give instructions to your database, but it's split i
 
 SQL Sample Code:
 
-CREATE TABLE Customers (
-    CustomerID INT(6) NOT NULL AUTO_INCREMENT,
-    FirstName VARCHAR(200) NOT NULL,
-    LastName VARCHAR(200) NOT NULL,
-    Email VARCHAR(200),
-    Address VARCHAR(200),
-    City VARCHAR(200),
-    State CHAR(2),
-    Phone VARCHAR(20) NOT NULL,
-    Birthday DATE,
-    FavoriteDish INT(6) REFERENCES Dishes(DishID),
-    PRIMARY KEY (CustomerID)
+```sql
+CREATE TABLE Customers ( 
+    CustomerID INT(6) NOT NULL AUTO_INCREMENT, 
+    FirstName VARCHAR(200) NOT NULL, 
+    LastName VARCHAR(200) NOT NULL, 
+    Email VARCHAR(200), 
+    Address VARCHAR(200), 
+    City VARCHAR(200), 
+    State CHAR(2), 
+    Phone VARCHAR(20) NOT NULL, 
+    Birthday DATE, 
+    FavoriteDish INT(6) REFERENCES Dishes(DishID), 
+    PRIMARY KEY (CustomerID) 
 );
+```
 
 ### Writing SQL Queries
  **Query:** a structured request, or question, asking the database to get, modify, or analyze data.

@@ -6,3 +6,4 @@ A collection of notes covering the foundational concepts of databases from the L
 - [Database Foundations](./databasefoundations.md)
 - [Tables](./tables.md)
 - [Relationships](./relationships.md)
+- [Further Database Topics](./furthertopics.md)

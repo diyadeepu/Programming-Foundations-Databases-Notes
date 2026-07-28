@@ -114,3 +114,17 @@ You can use the command JOIN to connect two different tables. JOIN tells the dat
   - e.g. ON Customers.FavoriteDish = Dishes.DishID (_Whenever the 'Favorite Dish' number in the customer table matches the 'Dish ID' number in the menu table, stitch those 2 rows together._)
 
 Once you're able to do this, you can connect more tables at once, like pulling a customer's name, reservation time, and the price of their order into a single, easy to read report.
+
+Example:
+
+SELECT FirstName, LastName, FavoriteDish, Dishes.'Name'| FROM Customers
+JOIN Dishes ON Customers.FavoriteDish = Dishes.DishID;
+
+Output:
+
+| FirstName | LastName | Favorite Dish | Name |
+| --- | --- | --- | --- |
+| Taylor | Jenkins | 8 | Chef's Salad |
+| Anna | Smith | 13 | Tofu Skewers |
+| Sam | Thomas | 24 | French Onion Soup |
+| Nicole | George | 19 | Spinach Ravioli |

@@ -128,3 +128,18 @@ Output:
 | Anna | Smith | 13 | Tofu Skewers |
 | Sam | Thomas | 24 | French Onion Soup |
 | Nicole | George | 19 | Spinach Ravioli |
+
+
+### Modifying Data
+
+To modify actual information inside table (create, update, delete), three commands you can use are:
+1. INSERT (Create): adds a brand new row. You tell the database which columns you filled and provide it values.
+   - e.g. INSERT INTO Customers (FirstName, LastName) VALUES ("John", "Doe");
+2. UPDATE: changes existing data, such as fixing typos or updating a phone no.
+   - e.g. UPDATE Customers SET Email="new@email.com" WHERE CustomerID=1;
+3. DELETE: permanently erases an entire row from the table
+   - e.g. DELETE FROM Customers WHERE CustomerID=26;
+
+Modifying data, however, can be extremely dangerous as there isn't any way to undo changes. To avoid this, ensure the following:
+1. **Always use the primary key.** For example, if you wanted to delete a customer named "Anna", don't ever use WHERE FirstName="Anna" (_EVERY SINGLE CUSTOMER WITH THE NAME 'ANNA' WILL BE DELETED FROM THE SYSTEM_). Instead, use their exact, unique ID number (e.g. WHERE CustomerID=28)
+2. **Don't forget the WHERE clause.** If you typed UPDATE Customers SET Email="test@test.com" and forget to add the WHERE filter at the end, the database will instantly overwrite _every single customer's email_ in the entire table to that test email. Ensure to always run a SELECT search first so that you target the right row.

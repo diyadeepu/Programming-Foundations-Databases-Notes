@@ -22,5 +22,14 @@ To make your system more secure, safer, and faster, DBMS tools offer three advan
 ### Access control, compliance, and injection
 Databases can contain sensitive information, so it's crucial to actively control visibility access and protect the system from malicious attacks. Security is a continuous process, not a one-time setup.
 
-1. Access Control\
-   - 
+1. Access Control
+   - Create specific user accounts with strict permission levels instead of letting everyone access the database
+   - Grant an administrator full power to modify the database structure (schema), while providing standard employees a "Read-Only" account
+     - This way, they can still look up data, but can't accidentally delete or change anything.
+2. Compliance
+   - Government laws dictate exactly how to store and protect your Personally Identifiable Information (PII)
+   - If you fail to design your database to comply with these major privacy laws, e.g. HIPAA, it can lead you to pay massive, costly legal fines.
+3. SQL Injection
+   - If your system is poorly designed, any attacked could type in a destructive SQL command into a normal input box (e.g. "; DROP TABLE Customers; into a "Last Name" field). The system could read that input as a real command and actually erase your entire table.
+   - Use secure programming practices to clean and process all user inputs.
+   - Train the database to treat whatever the user types strictly as harmless text, never as executable code.

@@ -39,6 +39,7 @@ Choose a DBMS that matches the style and size of your project as not all databas
 1. Size Scale (Traditional Relational Databases)
    - Micro: _SQLite_. Perfect for tiny, local jobs, like saving user preferences directly inside a single mobile phone app.
    - Desktop: _Microsoft Access or FileMaker Pro_. Built for small projects with just a few users, usually running locally on a single computer rather than a massive server.
+     - Hosted on workstation
    - Middle Ground: _MySQL or MariaDB_. Flexible, cost effective, and great for everything from a quick prototype to an app with thousands of daily users.
    - Enterprise: _Oracle, Microsoft SQL Server, SAP HANA_. Built to handle millions of simultaneous interactions for massive companies.
      - They're incredibly powerful, but come with high licensing and infrastructure costs.
@@ -47,3 +48,14 @@ Choose a DBMS that matches the style and size of your project as not all databas
    - Traditions tables are too rigid for messy, unpredictable data. You can't easily fit continuous streams of social media comments, complex webs of Facebook friends, or massive piles of unstructured "Big Data" into a neat Excel-style grid.
    - NoSQL databases don't have the strict table rules. They can store unstructured data exactly as it naturally flows
    - If the data gets really massive, engineers switch to specialized processing frameworks, like Hadoop or Spark).
+
+### Summary
+- Hadoop and Spark are often used for big data applications.
+- Microsoft Access is generally considered a desktop database platform.
+- Relational databases can store all but graph data. Some NoSQL databases are designed to store data arranged as graphs.
+- A stored procedure is a predefined query or statement that can be called by developers or users in their queries.
+- An index helps to increase the speed of lookups using a particular column at the cost of speed while modifying records.
+- A SQL injection is when a malicious user tries to change the way a SQL statement works by entering their own SQL into an application.
+- If you store certain kinds of information, like PII, your database may be subject to various regulations.
+- A database transaction is a group of statements that runs or fails as a whole.
+  - In a transaction, multiple statements are combined into a single logical block, where one failing statement rolls back the entire action.

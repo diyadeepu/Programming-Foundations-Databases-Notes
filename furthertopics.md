@@ -18,3 +18,9 @@ To make your system more secure, safer, and faster, DBMS tools offer three advan
    - If you run a massive, complicated JOIN query every morning for a report, you don't need to retype it → Just trigger the saved procedure.
    - Database administrators use these as guards by locking users out of the raw table completely. Users can only interact with the data through safe, pre-approved procedures.
      - This way, people don't accidentally type dangerous commands or access sensitive data they shouldn't see.
+
+### Access control, compliance, and injection
+Databases can contain sensitive information, so it's crucial to actively control visibility access and protect the system from malicious attacks. Security is a continuous process, not a one-time setup.
+
+1. Access Control\
+   - 

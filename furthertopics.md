@@ -33,3 +33,17 @@ Databases can contain sensitive information, so it's crucial to actively control
    - If your system is poorly designed, any attacked could type in a destructive SQL command into a normal input box (e.g. "; DROP TABLE Customers; into a "Last Name" field). The system could read that input as a real command and actually erase your entire table.
    - Use secure programming practices to clean and process all user inputs.
    - Train the database to treat whatever the user types strictly as harmless text, never as executable code.
+
+### Software Options
+Choose a DBMS that matches the style and size of your project as not all databases are built for the same job.
+1. Size Scale (Traditional Relational Databases)
+   - Micro: _SQLite_. Perfect for tiny, local jobs, like saving user preferences directly inside a single mobile phone app.
+   - Desktop: _Microsoft Access or FileMaker Pro_. Built for small projects with just a few users, usually running locally on a single computer rather than a massive server.
+   - Middle Ground: _MySQL or MariaDB_. Flexible, cost effective, and great for everything from a quick prototype to an app with thousands of daily users.
+   - Enterprise: _Oracle, Microsoft SQL Server, SAP HANA_. Built to handle millions of simultaneous interactions for massive companies.
+     - They're incredibly powerful, but come with high licensing and infrastructure costs.
+2. Beyond the Table (NoSQL & Big Data)
+   - NoSQL: "Not Only SQL"
+   - Traditions tables are too rigid for messy, unpredictable data. You can't easily fit continuous streams of social media comments, complex webs of Facebook friends, or massive piles of unstructured "Big Data" into a neat Excel-style grid.
+   - NoSQL databases don't have the strict table rules. They can store unstructured data exactly as it naturally flows
+   - If the data gets really massive, engineers switch to specialized processing frameworks, like Hadoop or Spark).

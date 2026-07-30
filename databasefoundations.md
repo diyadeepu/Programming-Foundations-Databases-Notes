@@ -49,14 +49,14 @@ Example:
 Building relationships with different tables allows us to utilize data in more sophisticated implementations.
 
 The three types of database relationships include:
-- One-to-many
+- **One-to-many**
   - The most common relationship where a record from one table is associated with multiple records in another table.
   - For example, if we take a dish from the dishes table and look through our customers table, we can identify which customers found that particular dish to be their favorite. The key from the dishes table would be a primary key, while the key in the customers table would be a foreign key.
 
-- Many-to-many
+- **Many-to-many**
   - This relationship occurs when multiple records from one table are associated with multiple records in another table. We use a linking table here that has columns with foreign keys from each table.
 
-- One-to-one
+- **One-to-one**
   - This relationship occurs when one record from a table is associated with a single record in another table and vice versa.
   - This isn't as commonly used, but it can be useful.
  

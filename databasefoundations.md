@@ -8,7 +8,7 @@
 
 ### What is a Relational Database?
 A database organizing data into relations (tables of related data).
-- Rows in a table are instances of an item / object. A set of rows is referred to as "tuples"
+- Rows in a table are instances of an item / object. A set of rows is referred to as "tuples".
 - Columns in a table are attributes of that item / object. A set of columns is referred to as a relation.
 - Example: Let's say a restaurant stores information about its customers in a table within a database. Each customer would be an entity, and the attributes collected would be name, phone no., email, etc. Another table stored in the database could be dishes. Each dish would be an entity, and the attributes collected here would differ from the customers: name, price, description, etc.
 
